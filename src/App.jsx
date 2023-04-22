@@ -7,7 +7,7 @@ import UsersList from "./components/UsersList";
 import DeleteModal from "./components/DeleteModal";
 import AlertModal from "./components/AlertModal";
 
-const URL_BASE = "http://users-crud.academlo.tech/";
+const URL_BASE = "https://users-crud.academlo.tech/";
 const DEFAULT_VALUES = {
   first_name: "",
   last_name: "",
