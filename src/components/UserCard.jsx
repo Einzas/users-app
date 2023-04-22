@@ -14,14 +14,14 @@ const UserCard = ({
   };
   return (
     <article className="border rounded-md">
-      <div className="border-b">
+      <div className="relative border-b-4">
         <img
-          className="w-[100px] mx-auto rounded-md aspect-[3/5] object-cover"
+          className="w-full h-72  mx-auto rounded-md   object-fill "
           src={user.image_url === null ? "/images/default.png": user.image_url}
           alt="User-Image"
         />
       </div>
-      <h3 className="font-bold text-xl sm:text-2xl md:text-3xl text-center">
+      <h3 className="font-bold pt-3 text-xl sm:text-2xl md:text-3xl text-center">
         {user.first_name} {user.last_name}
       </h3>
       <ul className="grid gap-3 pt-4 mx-6">

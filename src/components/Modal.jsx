@@ -88,7 +88,10 @@ const Modal = ({
             id="email"
             {...register("email", {
               required: "This field is required",
-              maxLength: { value: 150, message: "The max lenght for email is 150" },
+              maxLength: {
+                value: 150,
+                message: "The max lenght for email is 150",
+              },
               pattern: {
                 value: /\S+@\S+\.\S+/,
                 message: "Invalid email",
@@ -107,10 +110,16 @@ const Modal = ({
             className="border-[1px] rounded-sm bg-gray-100 p-1"
             type="password"
             id="password"
-            {...register("password",{
+            {...register("password", {
               required: "This field is required",
-              maxLength: { value: 25, message: "The max lenght for passwords is 25" },
-              minLength: { value: 6, message: "The min lenght for passwords is 6" },
+              maxLength: {
+                value: 25,
+                message: "The max lenght for passwords is 25",
+              },
+              minLength: {
+                value: 6,
+                message: "The min lenght for passwords is 6",
+              },
             })}
           />
         </div>
@@ -135,7 +144,8 @@ const Modal = ({
             id="image_url"
             {...register("image_url", {
               pattern: {
-                value: /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png|jpeg)/,
+                value:
+                  /(https?:\/\/(?:(?:[a-z0-9]+[.-])+[a-z0-9]+|(?:(?:cdn|.+cdn\d?)\.){1}[a-z0-9-]+(?:\.[a-z0-9-]+)*)(?:\/[^\s?#]*)+\.(?:jpe?g|png|gif|bmp|tiff|webp)(?:\?[^#]*)?(?:#.*)?)$/  ,
                 message: "Invalid image url",
               },
             })}
