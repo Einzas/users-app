@@ -34,7 +34,7 @@ const UserCard = ({
           <h4 className="text-gray-300">Birthdate</h4>
           <span className="flex gap-2 items-center text-sm">
             <i className="bx bx-gift"></i>
-            {user.birthday === null ? "Not available" : `${String(new Date(user.birthday).getDate()).padStart(2, '0')}-${String(new Date(user.birthday).getMonth() + 1).padStart(2, '0')}-${new Date(user.birthday).getFullYear()}`}
+            {user.birthday === null ? "Not available" : user.birthday}
           </span>
         </li>
       </ul>
