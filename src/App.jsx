@@ -44,7 +44,7 @@ function App() {
 
   const getAllUsers = () => {
     axios
-      .get(`${URL_BASE}/users/`)
+      .get(`${URL_BASE}users/`)
       .then((response) => {
         setUsers(response.data);
       })
@@ -55,7 +55,7 @@ function App() {
 
   const createUser = (user) => {
     axios
-      .post(`${URL_BASE}/users/`, user)
+      .post(`${URL_BASE}users/`, user)
 
       .then(() => {
         getAllUsers();
